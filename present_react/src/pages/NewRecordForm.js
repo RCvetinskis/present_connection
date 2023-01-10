@@ -7,7 +7,7 @@ import ApiRoutes from "../utilities/ApiRoutes";
 import mainContext from "../context/MainContext";
 import Inputs from "../components/Inputs";
 const NewRecordForm = () => {
-  const { getCars, setCars, carAdded, setCarAdded } = useContext(mainContext);
+  const { carAdded, setCarAdded } = useContext(mainContext);
 
   const nav = useNavigate("/");
 
