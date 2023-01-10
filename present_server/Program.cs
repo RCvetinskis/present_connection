@@ -15,7 +15,7 @@ builder.Services.AddCors(options =>
     {
         builder.AllowAnyMethod()
         .AllowAnyHeader()
-        .WithOrigins("http://localhost:3000", "https://appname.azurestaticapps.net");
+        .WithOrigins("http://localhost:3000", "https://lively-bay-009ab1403.2.azurestaticapps.net");
         
     });
 });
