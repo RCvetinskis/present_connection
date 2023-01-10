@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  user-select: text;
+  font-family: "Roboto", sans-serif;
+}
+
+/* cursor for table */
+.list-page td {
+  cursor: pointer;
+}
+.table {
+  min-height: 60vh;
+}
+
+/* car-card */
+/* lowers with */
+.car-card {
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* submit btn */
+
+.submit-btn {
+  opacity: 1;
+  outline: 0;
+  color: #fff;
+  line-height: 60px;
+  position: relative;
+  letter-spacing: 1px;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+
+  width: 350px;
+}
+.submit-btn:active {
+  margin-right: 5px;
+}
+
+/* after */
+.submit-btn::after {
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  color: #323237;
+  transition: 0.2s ease-in;
+  position: absolute;
+  background: #adadaf;
+  content: attr(data-car);
+  transform: translateY(-50%) rotateX(90deg);
+}
+
+.submit-btn:hover::after {
+  opacity: 1;
+  transform: translateY(0) rotateX(0);
+}
+
+/* before */
+.submit-btn::before {
+  top: 0;
+  left: 0;
+  opacity: 1;
+  color: #adadaf;
+  display: block;
+  padding: 0 30px;
+  line-height: 60px;
+  border-radius: 6px;
+  transition: 0.2s ease-out;
+  position: relative;
+  background: #323237;
+  content: attr(data-post);
+  transform: translateY(0) rotateX(0);
+}
+.submit-btn:hover::before {
+  opacity: 0;
+  transform: translateY(50%) rotateX(90deg);
+}
+
+/* pagination btn color */
+
+.page-link {
+  background: #323237 !important;
+  border-color: white !important;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  color: #adadaf;
+}
+
+.page-link:hover {
+  transform: scale(0.9);
+  color: white !important;
+}
+
+/* loading spinner */
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-spinner {
+  position: absolute;
+  z-index: 100000;
+  top: 50%;
+  right: 50%;
+  width: 50px;
+  height: 50px;
+  border: 10px solid #f3f3f3;
+  border-top: 10px solid #383636;
+  border-radius: 50%;
+  animation: spinner 1.5s linear infinite;
+}
